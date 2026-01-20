@@ -1,0 +1,81 @@
+.filters-bar {
+    display: flex;
+    gap: 20px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group select {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.search-group {
+    flex: 1;
+}
+
+.search-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.publication-item {
+    margin-bottom: 30px;
+}
+
+.pub-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.pub-authors {
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.pub-meta {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.pub-venue {
+    font-style: italic;
+}
+
+.pub-type {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pub-links {
+    display: flex;
+    gap: 10px;
+}
+
+.pub-link {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}

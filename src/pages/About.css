@@ -1,0 +1,105 @@
+.biography-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bio-full p {
+    margin-bottom: 1.75rem;
+    font-size: 1.15rem;
+    color: var(--text-color);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+    margin: 40px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.timeline {
+    position: relative;
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.timeline-item:hover::before {
+    background-color: var(--highlight-color);
+    transform: scale(1.2);
+}
+
+.year {
+    font-weight: 700;
+    color: var(--highlight-color);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.timeline-item h4 {
+    margin-bottom: 4px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.institution {
+    color: var(--text-light);
+    font-style: italic;
+    font-family: var(--font-heading);
+}
+
+.details {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.awards-list {
+    list-style: none;
+}
+
+.awards-list li {
+    margin-bottom: 16px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+.awards-list li::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
