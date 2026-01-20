@@ -4,7 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/dr-vaishnavi-moorthy-portfolio/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <meta name="theme-color" content="#0d1b2a" />
+    <title>Dr. Vaishnavi Moorthy | Portfolio</title>
+    <link rel="manifest" href="/dr-vaishnavi-moorthy-portfolio/manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/dr-vaishnavi-moorthy-portfolio/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
     <script type="module" crossorigin src="/dr-vaishnavi-moorthy-portfolio/assets/index-0BEKLeJE.js"></script>
     <link rel="stylesheet" crossorigin href="/dr-vaishnavi-moorthy-portfolio/assets/index-DoHT4AIO.css">
   </head>
