@@ -135,26 +135,98 @@
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-name {
-        font-size: 2.5rem;
-    }
-
-    .hero-headline {
-        font-size: 1.5rem;
+        font-size: 2.8rem;
     }
 
     .hero-buttons {
         justify-content: center;
     }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    /* .hero-container is already handled by 1100px query inheritance, 
+       but we can override specific gaps if needed. 
+       Removing redundant flex-direction as it's inherited. */
+
+    .hero-name {
+        font-size: 2.2rem;
+        word-wrap: break-word;
+        line-height: 1.2;
+    }
+
+    .hero-name {
+        font-size: 2.2rem;
+        word-wrap: break-word;
+        /* Prevent long names from overflowing */
+        line-height: 1.2;
+    }
+
+    .hero-headline {
+        font-size: 1.35rem;
+        padding: 0 10px;
+        /* Add slight padding to prevent edge touching */
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+        padding: 0 15px;
+        /* Ensure reading comfort */
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-image-wrapper::before {
+        width: 220px;
+        height: 220px;
+    }
 
     .hero-image {
         width: 250px;
         height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 1.8rem;
+    }
+
+    .hero-headline {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-image-wrapper::before {
+        width: 180px;
+        height: 180px;
     }
 }
