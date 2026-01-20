@@ -3,13 +3,9 @@
 :root {
   /* Color Palette - Academic Premium */
   --primary-color: #0d1b2a;
-  /* Dark Navy */
   --secondary-color: #1b263b;
-  /* Lighter Navy */
   --accent-color: #e0e1dd;
-  /* Platinum */
   --highlight-color: #d4af37;
-  /* Gold */
 
   --text-color: #1f2937;
   --text-light: #6b7280;
@@ -28,8 +24,11 @@
 
   /* Effects */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+               0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+               0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
   --transition: all 0.3s ease;
 }
 
@@ -46,6 +45,10 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ===============================
+   Typography (Responsive)
+================================ */
 
 h1,
 h2,
@@ -76,6 +79,10 @@ h3 {
   font-size: 1.5rem;
 }
 
+/* ===============================
+   Links
+================================ */
+
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -85,6 +92,10 @@ a {
 a:hover {
   color: var(--highlight-color);
 }
+
+/* ===============================
+   Layout
+================================ */
 
 .container {
   max-width: var(--max-width);
@@ -96,7 +107,10 @@ a:hover {
   padding: 80px 0;
 }
 
-/* Glassmorphism Classes */
+/* ===============================
+   Glassmorphism
+================================ */
+
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
@@ -104,7 +118,10 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Components */
+/* ===============================
+   Buttons
+================================ */
+
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -124,13 +141,16 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
+/* ===============================
+   Media & Utilities
+================================ */
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* Utility */
 .mt-4 {
   margin-top: 1.5rem;
 }
@@ -141,4 +161,41 @@ img {
 
 .text-center {
   text-align: center;
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+   (NO COLOR CHANGES)
+================================ */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
 }
