@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 
 // Layout
 import Layout from './components/Layout';
@@ -19,24 +20,23 @@ import CV from './pages/CV';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/research" element={<Research />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/teaching" element={<Teaching />} />
-          <Route path="/students" element={<Students />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/talks" element={<Talks />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cv" element={<CV />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/teaching" element={<Teaching />} />
+        <Route path="/students" element={<Students />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/talks" element={<Talks />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cv" element={<CV />} />
+      </Routes>
+    </Layout>
   );
 }
+
 
 export default App;
