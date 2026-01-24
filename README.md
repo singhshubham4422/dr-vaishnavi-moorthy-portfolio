@@ -5,6 +5,7 @@ A professional, responsive, and accessible academic portfolio website built with
 ## 🚀 Features
 
 - **Premium Design**: "Academic Deep Navy & Gold" theme with glassmorphism effects and smooth transitions.
+- **Typography**: Uses **Playfair Display** for headings and **Inter** for body text for optimal readability and academic elegance.
 - **Dynamic Content**: Data is separated from UI components (stored in `src/data`), making updates easy without touching React code.
 - **SEO Friendly**: Uses `react-helmet` to manage document heads for better search engine visibility.
 - **Responsive**: Fully optimized for mobile, tablet, and desktop viewing.
@@ -26,11 +27,16 @@ src/
 ├── assets/          # Images and static files
 ├── components/      # Reusable UI components (Navbar, Footer)
 ├── data/            # JSON/JS data files (Update content here!)
-│   ├── profile.js
+│   ├── aboutData.js
 │   ├── homeData.js
+│   ├── newsData.js
+│   ├── profile.js
+│   ├── projectsData.js
+│   ├── publicationsData.js
 │   ├── researchData.js
-│   ├── publicationData.js
-│   └── ...
+│   ├── studentsData.js
+│   ├── talksData.js
+│   └── teachingData.js
 ├── pages/           # Page components (Home, About, Research, etc.)
 ├── styles/          # Global styles (if separated)
 ├── App.jsx          # Main application component
@@ -82,6 +88,10 @@ You do not need to edit the React components to change most content. All text an
 - **Bio & History**: Edit `src/data/aboutData.js`
 - **Research Interests**: Edit `src/data/researchData.js`
 - **Publications**: Edit `src/data/publicationsData.js`
+- **Projects**: Edit `src/data/projectsData.js`
+- **News**: Edit `src/data/newsData.js`
+- **Talks & Service**: Edit `src/data/talksData.js`
+- **Students**: Edit `src/data/studentsData.js`
 - **Courses**: Edit `src/data/teachingData.js`
 
 ### Changing the Profile Image

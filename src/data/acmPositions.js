@@ -1,0 +1,38 @@
+export const acmPositions = [
+    {
+        id: 1,
+        title: "Chairperson",
+        status: "Filled",
+        currentHolder: "Alexandra Chen"
+    },
+    {
+        id: 2,
+        title: "Vice Chairperson",
+        status: "Vacant",
+        currentHolder: null
+    },
+    {
+        id: 3,
+        title: "Secretary",
+        status: "Filled",
+        currentHolder: "Rahul Gupta"
+    },
+    {
+        id: 4,
+        title: "Webmaster",
+        status: "Vacant",
+        currentHolder: null
+    },
+    {
+        id: 5,
+        title: "Technical Lead",
+        status: "Vacant",
+        currentHolder: null
+    },
+    {
+        id: 6,
+        title: "Event Coordinator",
+        status: "Filled",
+        currentHolder: "Sarah Johnson"
+    }
+];

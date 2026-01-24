@@ -1,0 +1,123 @@
+.page-header {
+    margin-bottom: 3rem;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.opportunity-card {
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.opportunity-card.closed {
+    opacity: 0.7;
+    background: rgba(243, 244, 246, 0.5);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-badge.open,
+.status-badge.vacant {
+    background-color: rgba(75, 181, 67, 0.1);
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.status-badge.closed,
+.status-badge.filled {
+    background-color: rgba(107, 114, 128, 0.1);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+}
+
+.abstract {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.skills-section h4,
+.holder-section h4 {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+    background-color: var(--bg-alt);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.apply-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.disabled-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-alt);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: not-allowed;
+    font-weight: 600;
+}

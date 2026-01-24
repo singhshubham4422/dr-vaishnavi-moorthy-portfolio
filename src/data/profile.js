@@ -3,7 +3,7 @@ export const profile = {
     title: "Associate Professor",
     department: "Department of Networking and Communications",
     university: "SRM Institute of Science and Technology (SRMIST)",
-    email: "vaishnam@srmist.edu.in",
+    email: "ss4422@srmist.edu.in",
     office: "Kattankulathur – Chennai",
     address: "SRM Institute of Science and Technology, Kattankulathur, Chennai, India",
     phone: "9952066681",

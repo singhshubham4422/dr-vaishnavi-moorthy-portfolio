@@ -77,6 +77,18 @@ const About = () => {
                         </section>
                     </div>
                 </div>
+
+                <hr className="divider" style={{ margin: '3rem 0' }} />
+
+                <div className="student-cta-section text-center glass" style={{ padding: '2rem', borderRadius: '12px' }}>
+                    <h2>Are you a Student?</h2>
+                    <p style={{ marginBottom: '1.5rem', color: 'var(--text-light)' }}>
+                        I am always looking for motivated students to join my research team or lead the ACM Student Chapter.
+                    </p>
+                    <a href="/faculty" className="btn">
+                        Visit Faculty & Student Portal
+                    </a>
+                </div>
             </div>
         </div>
     );

@@ -21,13 +21,7 @@ const Navbar = () => {
                 </div>
                 <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
                     <li className="navbar-item"><NavLink to="/" className="navbar-link" onClick={toggleMenu}>Home</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/about" className="navbar-link" onClick={toggleMenu}>About</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/research" className="navbar-link" onClick={toggleMenu}>Research</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/publications" className="navbar-link" onClick={toggleMenu}>Publications</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/teaching" className="navbar-link" onClick={toggleMenu}>Teaching</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/students" className="navbar-link" onClick={toggleMenu}>Team</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/projects" className="navbar-link" onClick={toggleMenu}>Projects</NavLink></li>
-                    <li className="navbar-item"><NavLink to="/news" className="navbar-link" onClick={toggleMenu}>News</NavLink></li>
+                    <li className="navbar-item"><NavLink to="/faculty" className="navbar-link" onClick={toggleMenu}>Faculty Platform</NavLink></li>
                     <li className="navbar-item"><NavLink to="/contact" className="navbar-link" onClick={toggleMenu}>Contact</NavLink></li>
                 </ul>
             </div>
