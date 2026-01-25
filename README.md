@@ -27,17 +27,11 @@ src/
 ├── assets/          # Images and static files
 ├── components/      # Reusable UI components (Navbar, Footer)
 ├── data/            # JSON/JS data files (Update content here!)
-│   ├── aboutData.js
+│   ├── acmPositions.js
 │   ├── homeData.js
-│   ├── newsData.js
 │   ├── profile.js
-│   ├── projectsData.js
-│   ├── publicationsData.js
-│   ├── researchData.js
-│   ├── studentsData.js
-│   ├── talksData.js
-│   └── teachingData.js
-├── pages/           # Page components (Home, About, Research, etc.)
+│   └── researchOpportunities.js
+├── pages/           # Page components (Home, FacultyPage, etc.)
 ├── styles/          # Global styles (if separated)
 ├── App.jsx          # Main application component
 ├── index.css        # Global CSS, Variables, and Typography
@@ -85,14 +79,9 @@ The output will be in the `dist/` directory, ready to be deployed to Netlify, Ve
 You do not need to edit the React components to change most content. All text and data are stored in `src/data/`.
 
 - **Personal Details**: Edit `src/data/profile.js`
-- **Bio & History**: Edit `src/data/aboutData.js`
-- **Research Interests**: Edit `src/data/researchData.js`
-- **Publications**: Edit `src/data/publicationsData.js`
-- **Projects**: Edit `src/data/projectsData.js`
-- **News**: Edit `src/data/newsData.js`
-- **Talks & Service**: Edit `src/data/talksData.js`
-- **Students**: Edit `src/data/studentsData.js`
-- **Courses**: Edit `src/data/teachingData.js`
+- **Home Page Content**: Edit `src/data/homeData.js`
+- **Research Projects**: Edit `src/data/researchOpportunities.js`
+- **ACM Roles**: Edit `src/data/acmPositions.js`
 
 ### Changing the Profile Image
 1.  Place your new image in `src/assets/`.
@@ -104,11 +93,24 @@ You do not need to edit the React components to change most content. All text an
     image: myNewImage,
     ```
 
-## 📧 Contact Form
+## 📧 Application & Contact Forms
 
-The contact form is currently set to **simulation mode**. To make it functional:
-1.  Register at [Formspree](https://formspree.io/) or [EmailJS](https://www.emailjs.com/).
-2.  Update the `handleSubmit` function in `src/pages/Contact.jsx` with your service's API logic.
+The application uses a **Node.js + Express + Nodemailer** backend for secure email delivery and resume handling.
+
+### Backend Setup
+1.  Navigate to `server/`.
+2.  Create a `.env` file with your credentials:
+    ```env
+    PORT=5000
+    EMAIL_USER=your-email@gmail.com
+    EMAIL_PASS=your-app-password
+    FACULTY_EMAIL=ss4422@srmist.edu.in
+    ```
+3.  Run `npm start`.
+
+### Frontend Setup
+1.  Run `npm run dev`.
+2.  The application talks to `http://localhost:5000/api/apply`.
 
 ## 📄 License
 

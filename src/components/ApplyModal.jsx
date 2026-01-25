@@ -48,7 +48,10 @@ const ApplyModal = ({ isOpen, onClose, title, type }) => {
         data.append('resume', formData.resume);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/apply';
+            // STEP 1: Targeting local backend explicitly for debugging
+            const apiUrl = 'http://localhost:5000/api/apply';
+            console.log("🚀 Submitting to:", apiUrl);
+
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 body: data,
@@ -56,7 +59,7 @@ const ApplyModal = ({ isOpen, onClose, title, type }) => {
 
             const result = await response.json();
 
-            if (result.success) {
+            if (response.ok) {  // Accepted 2xx status from Formspree or Backend
                 setStatus('success');
                 setTimeout(() => {
                     onClose();
@@ -64,7 +67,9 @@ const ApplyModal = ({ isOpen, onClose, title, type }) => {
                     setFormData({ name: '', email: '', skills: '', resume: null });
                 }, 3000);
             } else {
-                throw new Error(result.message || 'Submission failed');
+                // Formspree returns 'errors' array, custom backend returns 'message'
+                const msg = result.error || (result.errors ? result.errors.map(e => e.message).join(', ') : result.message) || 'Submission failed';
+                throw new Error(msg);
             }
         } catch (error) {
             setStatus('error');

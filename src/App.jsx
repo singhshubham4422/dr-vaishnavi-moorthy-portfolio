@@ -13,6 +13,8 @@ import Contact from './pages/Contact';
 import FacultyPage from './pages/FacultyPage';
 import ResearchOpportunities from './pages/ResearchOpportunities';
 import ACMActivities from './pages/ACMActivities';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -25,6 +27,10 @@ function App() {
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/faculty/research" element={<ResearchOpportunities />} />
         <Route path="/faculty/acm" element={<ACMActivities />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
     </Layout>
   );

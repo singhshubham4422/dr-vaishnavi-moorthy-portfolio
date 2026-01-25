@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { researchOpportunities } from '../data/researchOpportunities';
+// import { researchOpportunities } from '../data/researchOpportunities'; // Removed static import
 import ApplyModal from '../components/ApplyModal';
 import { Beaker, Clock, Code, ArrowUpRight } from 'lucide-react';
 import '../styles/Opportunities.css';
@@ -7,6 +7,23 @@ import '../styles/Opportunities.css';
 const ResearchOpportunities = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [researchOpportunities, setResearchOpportunities] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/api/research');
+                const data = await response.json();
+                setResearchOpportunities(data);
+            } catch (error) {
+                console.error("Failed to fetch research opportunities", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     const handleApply = (project) => {
         setSelectedProject(project);
@@ -26,7 +43,7 @@ const ResearchOpportunities = () => {
             </div>
 
             <div className="opportunities-grid">
-                {researchOpportunities.map((project) => (
+                {loading ? <p>Loading opportunities...</p> : researchOpportunities.map((project) => (
                     <div key={project.id} className={`opportunity-card glass ${project.status === 'Closed' ? 'closed' : ''}`}>
                         <div className="card-header">
                             <h3>{project.title}</h3>

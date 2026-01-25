@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 const sendApplicationEmail = async (data, file) => {
   const { name, email, skills, appliedFor, type } = data;
 
-  const subject = type === 'research' 
+  const subject = type === 'research'
     ? `New Research Application: ${appliedFor}`
     : `New ACM Application: ${appliedFor}`;
 
@@ -33,8 +33,8 @@ const sendApplicationEmail = async (data, file) => {
     `,
     attachments: [
       {
-        filename: file.originalname,
-        content: file.buffer,
+        filename: file.originalname, // Original name
+        path: file.path,             // Path to file on disk
       },
     ],
   };

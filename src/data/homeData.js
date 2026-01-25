@@ -14,9 +14,5 @@ export const homeData = {
         "Generative AI",
         "Mental Health Analysis"
     ],
-    quickLinks: [
-        { label: "My Research", url: "/research" },
-        { label: "Publications", url: "/publications" },
-        { label: "Get in Touch", url: "/contact" }
-    ]
+
 };

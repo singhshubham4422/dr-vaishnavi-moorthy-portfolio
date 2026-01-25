@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { profile } from '../data/profile';
 import './Footer.css';
 
@@ -31,7 +32,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {currentYear} {profile.name}. All rights reserved.</p>
+                <p>&copy; {currentYear} {profile.name}. All rights reserved. | <Link to="/admin/login" style={{ color: 'inherit', textDecoration: 'none', opacity: 0.5 }}>Admin</Link></p>
             </div>
         </footer>
     );

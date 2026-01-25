@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "AI-Driven Healthcare Diagnostics",
+        "abstract": "Developing explainable AI models to assist radiologists in detecting early signs of neurodegenerative diseases from MRI scans. The project involves high-dimensional image processing and implementing deep learning architectures.",
+        "skills": [
+            "Python",
+            "PyTorch/TensorFlow",
+            "Computer Vision",
+            "Medical Imaging"
+        ],
+        "status": "Open"
+    },
+    {
+        "id": 2,
+        "title": "Secure IoT Communication Protocols",
+        "abstract": "Investigating lightweight encryption standards for low-power IoT devices in smart home environments. Focus on energy efficiency and resistance to side-channel attacks.",
+        "skills": [
+            "C/C++",
+            "Cryptography",
+            "IoT Networking",
+            "Embedded Systems"
+        ],
+        "status": "Open"
+    },
+    {
+        "id": 3,
+        "title": "Blockchain for Supply Chain Transparency",
+        "abstract": "Building a decentralized application (DApp) to track pharmaceutical supply chains to prevent counterfeit drugs. Requires knowledge of smart contracts and consensus algorithms.",
+        "skills": [
+            "Solidity",
+            "React",
+            "Web3.js",
+            "Blockchain Fundamentals"
+        ],
+        "status": "Closed"
+    }
+]

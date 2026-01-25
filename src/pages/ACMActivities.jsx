@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { acmPositions } from '../data/acmPositions';
+// import { acmPositions } from '../data/acmPositions'; // Removed static import
 import ApplyModal from '../components/ApplyModal';
 import { UserCheck, Shield, ArrowUpRight } from 'lucide-react';
 import '../styles/Opportunities.css';
@@ -7,6 +7,23 @@ import '../styles/Opportunities.css';
 const ACMActivities = () => {
     const [selectedPosition, setSelectedPosition] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [acmPositions, setAcmPositions] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    React.useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/api/acm');
+                const data = await response.json();
+                setAcmPositions(data);
+            } catch (error) {
+                console.error("Failed to fetch ACM positions", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     const handleApply = (position) => {
         setSelectedPosition(position);
@@ -26,7 +43,7 @@ const ACMActivities = () => {
             </div>
 
             <div className="opportunities-grid">
-                {acmPositions.map((position) => (
+                {loading ? <p>Loading positions...</p> : acmPositions.map((position) => (
                     <div key={position.id} className={`opportunity-card glass ${position.status === 'Filled' ? 'closed' : ''}`}>
                         <div className="card-header">
                             <h3>{position.title}</h3>
